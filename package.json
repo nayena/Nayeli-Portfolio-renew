@@ -3,6 +3,9 @@
     "commitizen": "^4.3.1"
   },
   "scripts": {
-  "commit": "cz"
-}
+    "commit": "cz"
+  },
+  "dependencies": {
+    "openai": "^6.15.0"
+  }
 }
