@@ -139,9 +139,15 @@ you don’t overhype — you explain, build, and keep moving.
     const answer = resp.choices?.[0]?.message?.content || "";
     return res.status(200).json({ answer });
   } catch (err) {
-    console.error("Gemini error:", err);
+    const status = err?.status ?? err?.response?.status;
+    const details =
+      err?.response?.data ??
+      err?.response?.text ??
+      err?.message ??
+      err?.toString();
+    console.error("Gemini error:", { status, details });
     return res
       .status(500)
-      .json({ error: "LLM request failed", details: err.toString() });
+      .json({ error: "LLM request failed", details: details ?? "unknown" });
   }
 }
