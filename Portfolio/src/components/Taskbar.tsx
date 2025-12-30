@@ -12,7 +12,7 @@ import Tooltip from "./Tooltip";
 export const Taskbar = ({theme}: {theme: "dark" | "light"}) => {
     return(
         <div
-        className={`flex w-fit max-w-sm sm:max-w-md lg:w-fit items-center gap-2 bottom-2 p-2 py-2lg:py-1rounded-xl justify-between px-3 lg:p-2${
+        className={`flex w-fit max-w-sm sm:max-w-md lg:w-fit fixed items-center gap-2 bottom-2 p-2 py-2 lg:py-1 rounded-xl justify-between px-3 lg:p-2${
             theme === "dark" ? "shadow-xl" : "shadow-sm"
         } mx-2 lg:mx-0 z-50 ${
             theme === "dark"

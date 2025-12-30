@@ -801,8 +801,8 @@ const App = () => {
     <div
       className={`${
         isDark
-          ? "bg-black text-white lg:bg-[url('/creation_of_adam.jpeg')]"
-          : "bg-white text-black lg:bg-[url('/creation_of_adam_light.jpg')]"
+          ? "bg-black text-white lg:bg-[url('/backgroundb.png')]"
+          : "bg-white text-black lg:bg-[url('/background.png')]"
       } min-h-screen w-screen flex items-center justify-center py-6 pb-24 lg:py-8 lg:pb-20 bg-fixed bg-cover bg-center overscroll-none`}
     >
       {/* Bento box grid */}
@@ -851,17 +851,17 @@ const App = () => {
                   isDark ? "text-blue-300" : "text-[#2A8EE0]"
                 } text-sm lg:text-lg`}
               >
-                daniel@MacbookPro
+              heidynayeli@MacbookPro
               </p>
               <p className="text-[9px] lg:text-sm mb-2">
-                nguyendaniel1312@gmail.com
+                heidynayeli8@gmail.com
               </p>
               <p className=" ml-4 text-xs lg:text-sm">Full-Stack</p>
-              <p className=" ml-4 text-xs lg:text-sm">Junior CS @ SJSU</p>
+              <p className=" ml-4 text-xs lg:text-sm">Sophomore CS @Brandeis</p>
               {/* <p className=" ml-4 text-xs lg:text-sm">
                 Expected Grad: May 2027
               </p> */}
-              <p className=" ml-4 text-xs lg:text-sm">San Jose, CA</p>
+              <p className=" ml-4 text-xs lg:text-sm">Waltham, MA</p>
               <p className=" ml-4 text-xs lg:text-sm">
                 {time.toLocaleTimeString()}
               </p>
@@ -927,9 +927,7 @@ const App = () => {
                   <p className="text-sm text-gray-400">
                     {nowPlaying.item.artists.join(", ")}
                   </p>
-                  {/* <p className="text-sm text-gray-500">
-                    {nowPlaying.item.album}
-                  </p> */}
+  
                 </div>
               </div>
             ) : (
@@ -948,7 +946,7 @@ const App = () => {
                     <p className="text-xs text-gray-400">
                       visit my{" "}
                       <a
-                        href="https://open.spotify.com/user/cringedlol"
+                        href="https://open.spotify.com/user/31woog7sqi7ucr5py2adkh4eczea"
                         className={`${
                           isDark ? "text-blue-400" : "text-[#2A8EE0]"
                         } underline`}
@@ -1023,7 +1021,7 @@ const App = () => {
               {leetCode && leetCode.totalSolved ? (
                 <div className="flex items-center gap-4">
                   <a
-                    href="https://leetcode.com/deeedaniel/"
+                    href="https://leetcode.com/u/nayena05/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`w-16 h-16 rounded-xl p-1 flex items-center justify-center cursor-pointer ${
@@ -1093,7 +1091,7 @@ const App = () => {
               selectedWindow === "cli"
             )}`}
           >
-            daniel-code - zsh
+            naye-code - zsh
             <button
               className="rounded-full p-1 bg-red-500 absolute right-10 top-1/2 -translate-y-1/2"
               onClick={() => setExpandWindow("")}
@@ -1293,13 +1291,7 @@ const App = () => {
                 {String(timerMinutes).padStart(2, "0")}:
                 {String(timerSeconds).padStart(2, "0")}
               </div>
-              {/* <div className="text-xs text-gray-400 mb-2">
-                {timerMode === "work"
-                  ? "Work Time"
-                  : timerMode === "break"
-                  ? "Short Break"
-                  : "Long Break"}
-              </div> */}
+            
               <div className="flex flex-col gap-2">
                 <button
                   onClick={isTimerRunning ? pauseTimer : startTimer}
@@ -1412,17 +1404,17 @@ const App = () => {
                         isDark ? "text-blue-300" : "text-[#75b8eb]"
                       } text-sm lg:text-lg`}
                     >
-                      daniel@MacbookPro
+                      heidynayeli@MacbookPro
                     </p>
                     <p className="text-[9px] lg:text-sm mb-2">
-                      nguyendaniel1312@gmail.com
+                      heidynayeli8@gmail.com
                     </p>
                     <p className=" ml-4 text-xs lg:text-sm">Full-Stack</p>
-                    <p className=" ml-4 text-xs lg:text-sm">CS @ SJSU</p>
+                    <p className=" ml-4 text-xs lg:text-sm">CS @ Brandeis University</p>
                     <p className=" ml-4 text-xs lg:text-sm">
-                      Expected Grad: May 2027
+                      Expected Grad: May 2028
                     </p>
-                    <p className=" ml-4 text-xs lg:text-sm">San Jose, CA</p>
+                    <p className=" ml-4 text-xs lg:text-sm">Waltham, MA</p>
                     <p className=" ml-4 text-xs lg:text-sm">
                       {time.toLocaleTimeString()}
                     </p>
@@ -1461,77 +1453,67 @@ const App = () => {
                       isDark ? "text-gray-200" : "text-gray-800"
                     }`}
                   >
-                    Back in high school, I took AP Computer Science for fun. I
-                    thought it was a really fun class, so when applying to
-                    colleges, I picked Computer Science as my major not really
-                    knowing what it was about. Since then, I have really fell in
-                    love with coding.
+                    I didn’t grow up coding. i got my first computer at sixteen, and my interest
+                     in computer science really took off during the IB program, when i started 
+                     noticing how fast AI tools were evolving. curiosity pushed me to take computer
+                      science seriously, even before fully knowing what that meant.
+                  </p>
+                    <p
+                    className={`text-gray-200 ${
+                      isDark ? "text-gray-200" : "text-gray-800"
+                    }`}
+                  >
+                  Once i got to brandeis, i fell in love with building things that actually help
+                   people. from working on student-facing apps like branda, to building full-stack
+                    platforms at hackathons and consulting projects through tamid, coding became 
+                    both a creative outlet and a way to make impact.
                   </p>
                   <p
                     className={`text-gray-200 ${
                       isDark ? "text-gray-200" : "text-gray-800"
                     }`}
                   >
-                    The summer before my first year at SJSU, I took an online
-                    coding curriculum called{" "}
+                  I’m currently a computer science and business student at brandeis university,
+                   maintaining a 4.0 gpa. i’ve worked as a software developer and consulting leader
+                    in {" "}
                     <a
-                      href="https://www.theodinproject.com/"
-                      className="text-blue-300 underline"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      theodinproject
+                    href="https://tamidgroup.org/"
+                    className="text-blue-300 underline"
+                    target="blank"
+                    rel="nonopener noreferer"> 
+                       TAMID
                     </a>
-                    . This was where I built all my fundamentals with utilizing
-                    the Terminal, Git, HTML, CSS, and JavaScript.
-                  </p>
-                  <p
-                    className={`text-gray-200 ${
-                      isDark ? "text-gray-200" : "text-gray-800"
-                    }`}
-                  >
-                    I'm currently in my third year at SJSU, and I'm expected to
-                    graduate in May 2027. I'm also working part-time as a
-                    full-stack developer at{" "}
+                    
+                    , led technical workshops for 200+ students through {" "}
                     <a
-                      href="https://twinmind.app/n385?pid=email&c=referral_campaign&deep_link_value=referral&deep_link_sub1=&deep_link_sub2=002f664a-1e10-4e2c-b7cc-61e820ec0081&deep_link_sub3=ios_inapp_share&af_sub1=002f664a-1e10-4e2c-b7cc-61e820ec0081&referrer_name=Daniel&af_dp=thirdear%3A%2F%2Fapp%2Freferral&af_web_dp=https%3A%2F%2Fwww.twinmind.com%2F/"
-                      className="text-blue-300 underline"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      TwinMind
+                    href="https://www.instagram.com/gwc_brandeis/"
+                    className="text-blue-300 underline"
+                    target="blank"
+                    //rel="nonopener nonreferer"
+                    > 
+                    Girls Who Code
                     </a>
-                    .
-                  </p>
+                    , and
+                     explored ai and machine learning through programs like ai4all and applied
+                     projects.
+                    </p>
+                  Outside of school, i enjoy teaching, mentoring, working out, listening to music, 
+                  and building ideas late at night just to see if they work.
                   <p
                     className={`text-gray-200 ${
                       isDark ? "text-gray-200" : "text-gray-800"
                     }`}
                   >
-                    Outside of school, I like to film & edit videos, playing
-                    basketball, watching movies/shows/anime, and listening to
-                    music.
+                  Right now, i’m focused on sharpening my software engineering skills, learning more
+                   about ai systems, and looking for summer 2026 internships where i can keep building
+                    useful, thoughtful technology.
                   </p>
-                  <p
-                    className={`text-gray-200 ${
-                      isDark ? "text-gray-200" : "text-gray-800"
-                    }`}
-                  >
-                    I'm currently focused on improving my engineering skills and
-                    searching for Summer 2026 internships.
-                  </p>
-                  {/* <p
-                    className={`text-gray-200 ${
-                      isDark ? "text-gray-200" : "text-gray-800"
-                    }`}
-                  >
-                    ✉︎ nguyendaniel1312@gmail.com
-                  </p> */}
+
                   <button
                     className="text-gray-400 text-left underline"
                     onClick={() => setExpandWindow("")}
                   >
-                    back to main page ❮
+                  back to main page ❮
                   </button>
                 </div>
               </div>
@@ -1886,7 +1868,7 @@ const App = () => {
                           <p className="text-xs text-gray-400">
                             visit my{" "}
                             <a
-                              href="https://open.spotify.com/user/cringedlol"
+                              href="https://open.spotify.com/user/31woog7sqi7ucr5py2adkh4eczea"
                               className="text-blue-400 underline"
                               target="_blank"
                               rel="noopener noreferrer"
@@ -2041,7 +2023,7 @@ const App = () => {
                   />
                 </p>
                 <div
-                  className="mt-2 mx-4 font-mono text-sm flex-grow overflow-y-auto"
+                  className="mt-2 mx-4 font-mono text-sm grow overflow-y-auto"
                   onClick={focusInput}
                 >
                   {lastCommand && (
@@ -2227,17 +2209,7 @@ const App = () => {
                         </button>
                       ))}
                     </div>
-                    {/* <input
-                      type="number"
-                      min="0"
-                      max="120"
-                      value={customMinutes}
-                      onChange={(e) =>
-                        setCustomTimer(parseInt(e.target.value) || 25)
-                      }
-                      className="w-full p-2 rounded text-center"
-                      placeholder="Custom minutes"
-                    /> */}
+                  
                   </div>
                 </div>
               </div>

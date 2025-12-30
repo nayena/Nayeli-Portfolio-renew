@@ -5,7 +5,7 @@ export default async function handler(req, res){
     }
     const {messages} = req.body; //Now expecting messages instead of questions
 
-    if(!messages || !Array.isArray(messages)|| messages.lenght === 0){
+    if(!messages || !Array.isArray(messages)|| messages.length === 0){
         return res.status(400).json({error: "No messages Provided"});
     }
 
@@ -127,9 +127,9 @@ you don’t overhype — you explain, build, and keep moving.      `,
     const answer = response.choices?.[0]?.message?.content || "";
     return res.status(200).json({answer});
     }catch(error){
-        console.error("Gemini error:", err);
+        console.error("Gemini error:", error);
         return res
             .status(500)
-            .json({error: "LLM request failed", details: err.toString()});
+            .json({error: "LLM request failed", details: error.toString()});
     }
 }
