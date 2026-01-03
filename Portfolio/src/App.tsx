@@ -923,17 +923,17 @@ const App = () => {
           <div className="mt-2 mx-4">
             {nowPlaying && nowPlaying.item ? (
               <div className="flex items-center">
-                <img
-                  src={nowPlaying.item.album_image}
-                  alt={nowPlaying.item.album}
-                  className={`w-16 h-16 rounded-md mr-4 ${
-                    nowPlaying.item.album === "PARTYNEXTDOOR 4 (P4)" ||
-                    nowPlaying.item.album === "L o s e M y M i n d" ||
-                    nowPlaying.item.album === "VULTURES 1"
-                      ? "blur-sm"
-                      : ""
-                  }`}
-                />
+                {nowPlaying.item.album_image ? (
+                  <img
+                    src={nowPlaying.item.album_image}
+                    alt={nowPlaying.item.album}
+                    className="w-16 h-16 rounded-md mr-4"
+                  />
+                ) : (
+                  <div className={`w-16 h-16 rounded-md mr-4 flex items-center justify-center ${isDark ? "bg-gray-800" : "bg-gray-200"}`}>
+                    <span className="text-2xl">♪</span>
+                  </div>
+                )}
                 <div>
                   <p className="font-bold">{nowPlaying.item.name}</p>
                   <p className="text-sm text-gray-400">
@@ -984,11 +984,17 @@ const App = () => {
                 </p>
                 {topTracks.tracks.map((track) => (
                   <div key={track.id} className="flex items-center mt-1.5">
-                    <img
-                      src={track.album_image}
-                      alt={track.album}
-                      className="w-8 h-8 rounded-md mr-4"
-                    />
+                    {track.album_image ? (
+                      <img
+                        src={track.album_image}
+                        alt={track.album}
+                        className="w-8 h-8 rounded-md mr-4"
+                      />
+                    ) : (
+                      <div className={`w-8 h-8 rounded-md mr-4 flex items-center justify-center ${isDark ? "bg-gray-800" : "bg-gray-200"}`}>
+                        <span className="text-xs">♪</span>
+                      </div>
+                    )}
                     <div className="text-sm text-gray-400">{track.name}</div>
                   </div>
                 ))}
@@ -1849,11 +1855,17 @@ const App = () => {
                 <div className="mt-2 mx-4">
                   {nowPlaying && nowPlaying.item ? (
                     <div className="flex items-center">
-                      <img
-                        src={nowPlaying.item.album_image}
-                        alt={nowPlaying.item.album}
-                        className="w-16 h-16 rounded-md mr-4"
-                      />
+                      {nowPlaying.item.album_image ? (
+                        <img
+                          src={nowPlaying.item.album_image}
+                          alt={nowPlaying.item.album}
+                          className="w-16 h-16 rounded-md mr-4"
+                        />
+                      ) : (
+                        <div className={`w-16 h-16 rounded-md mr-4 flex items-center justify-center ${isDark ? "bg-gray-800" : "bg-gray-200"}`}>
+                          <span className="text-2xl">♪</span>
+                        </div>
+                      )}
                       <div>
                         <p className="font-bold">{nowPlaying.item.name}</p>
                         <p className="text-sm text-gray-400">
@@ -1907,11 +1919,17 @@ const App = () => {
                           key={track.id}
                           className="flex items-center mt-1.5"
                         >
-                          <img
-                            src={track.album_image}
-                            alt={track.album}
-                            className="w-8 h-8 rounded-md mr-4"
-                          />
+                          {track.album_image ? (
+                            <img
+                              src={track.album_image}
+                              alt={track.album}
+                              className="w-8 h-8 rounded-md mr-4"
+                            />
+                          ) : (
+                            <div className={`w-8 h-8 rounded-md mr-4 flex items-center justify-center ${isDark ? "bg-gray-800" : "bg-gray-200"}`}>
+                              <span className="text-xs">♪</span>
+                            </div>
+                          )}
                           <div className="text-sm text-gray-400">
                             {track.name}
                           </div>

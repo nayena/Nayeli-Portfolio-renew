@@ -1,13 +1,14 @@
 export interface NowPlayingData {
-  is_playing: boolean;
+  isPlaying?: boolean;
   item: NowPlayingItem | null;
 }
 
 interface NowPlayingItem {
   album: string;
-  album_image: string;
+  album_image: string | null;
   artists: string[];
   name: string;
+  url?: string;
 }
 
 export interface TopTracksData {
@@ -17,11 +18,12 @@ export interface TopTracksData {
 interface Track {
   id: string;
   name: string;
-  artists: string[];
+  artist: string;
   album: string;
-  album_image: string;
-  spotify_url: string;
-  preview_url: string;
+  album_image: string | null;
+  playcount?: string;
+  url?: string;
+  rank?: number;
 }
 
 export interface LeetCodeData {
