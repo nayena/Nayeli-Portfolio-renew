@@ -17,12 +17,16 @@ export default async function handler(req, res) {
   // IMPORTANT: Use your Gemini API key (Google AI Studio)
   const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY;
   if (!apiKey) {
+    console.error("Missing GEMINI_API_KEY or GOOGLE_API_KEY environment variable");
     return res.status(500).json({
       error: "Missing API key",
       details:
         "Set GEMINI_API_KEY (or GOOGLE_API_KEY) in your environment variables.",
     });
   }
+  
+  // Log that we have a key (but not the key itself for security)
+  console.log("API key found, length:", apiKey.length);
 
   // Gemini OpenAI-compatible endpoint (per Google docs)
   const client = new OpenAI({
@@ -115,7 +119,7 @@ available commands:
     const conversationMessages = [systemMessage, ...messages];
 
     const response = await client.chat.completions.create({
-      model: "gemini-2.5-flash",
+      model: "gemini-2.0-flash",
       messages: conversationMessages,
       // optional knobs:
       // temperature: 0.7,
@@ -127,6 +131,13 @@ available commands:
   } catch (error) {
     // Give a more useful error for the common 403 case
     const status = error?.status || 500;
+    const errorMessage = error?.message || String(error);
+
+    console.error("Gemini API error:", {
+      status,
+      message: errorMessage,
+      error: error?.error || error,
+    });
 
     if (status === 403) {
       return res.status(403).json({
@@ -135,16 +146,17 @@ available commands:
           "GEMINI_API_KEY is missing/incorrect (must be a Gemini API key from Google AI Studio).",
           "Your key is restricted (API restrictions, referrer/IP restrictions) and blocks server-side calls.",
           "The Google project behind the key doesn't allow Generative Language API usage.",
+          "The model name might not be available for your API key.",
         ],
         hint:
-          "Try creating a fresh Gemini API key in Google AI Studio and set it as GEMINI_API_KEY in your deployment env vars.",
+          "Try creating a fresh Gemini API key in Google AI Studio (https://aistudio.google.com/apikey) and set it as GEMINI_API_KEY in your Vercel environment variables.",
+        debug_info: errorMessage,
       });
     }
 
-    console.error("Gemini error:", error);
     return res.status(status).json({
       error: "LLM request failed",
-      details: error?.message || String(error),
+      details: errorMessage,
     });
   }
 }

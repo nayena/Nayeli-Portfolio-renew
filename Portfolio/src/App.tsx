@@ -2008,7 +2008,7 @@ const App = () => {
                     selectedWindow === "cli"
                   )}`}
                 >
-                  daniel-code - zsh
+                  naye-code - zsh
                   <button
                     className="rounded-full p-1 bg-red-500 absolute right-10 top-1/2 -translate-y-1/2"
                     onClick={() => setExpandWindow("")}
@@ -2236,7 +2236,7 @@ const App = () => {
                 true
               )}`}
             >
-              daniel_nguyen_resume.pdf
+              Heidy_Naranjo_resume.pdf
               <button
                 className="rounded-full p-1 bg-red-500 absolute right-10 top-1/2 -translate-y-1/2 cursor-pointer hover:bg-red-600 transition-colors"
                 onClick={() => setIsResumeOpen(false)}
