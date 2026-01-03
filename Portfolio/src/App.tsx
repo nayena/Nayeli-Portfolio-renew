@@ -345,16 +345,28 @@ const App = () => {
     });
 
     const data = await res.json();
+    
+    // Handle error responses (including rate limiting)
+    if (!res.ok) {
+      const errorMessage = data.answer || "something went wrong. try again in a moment.";
+      onChunk(errorMessage);
+      // Don't update chat history on error
+      return;
+    }
+    
     const fullResponse = data.answer;
+    
+    if (!fullResponse) {
+      onChunk("hmm, i didn't get a response. try again?");
+      return;
+    }
 
     // Stream the response word by word for that authentic feel
     const words = fullResponse.split(" ");
-    let currentText = "";
 
     for (let i = 0; i < words.length; i++) {
       const word = words[i];
       const chunk = (i === 0 ? "" : " ") + word;
-      currentText += chunk;
       onChunk(chunk);
 
       // Variable delay based on word length and punctuation for natural feel

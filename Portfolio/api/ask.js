@@ -129,7 +129,6 @@ available commands:
     const answer = response?.choices?.[0]?.message?.content ?? "";
     return res.status(200).json({ answer });
   } catch (error) {
-    // Give a more useful error for the common 403 case
     const status = error?.status || 500;
     const errorMessage = error?.message || String(error);
 
@@ -139,6 +138,15 @@ available commands:
       error: error?.error || error,
     });
 
+    // Handle rate limiting (429)
+    if (status === 429) {
+      return res.status(429).json({
+        error: "Rate limit exceeded",
+        answer: "i'm getting too many requests right now. give me a moment and try again in a few seconds.",
+      });
+    }
+
+    // Handle permission denied (403)
     if (status === 403) {
       return res.status(403).json({
         error: "Permission denied (403) from Gemini",
@@ -156,6 +164,7 @@ available commands:
 
     return res.status(status).json({
       error: "LLM request failed",
+      answer: "something went wrong on my end. try again?",
       details: errorMessage,
     });
   }
