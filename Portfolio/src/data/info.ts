@@ -54,7 +54,7 @@ export const projectsData = [
     date: "Jan – Sep 2025",
     description:
       "Branda is a student-built mobile app that centralizes campus resources for thousands of students. I worked on the UX and frontend, redesigning layouts, separating features into reusable components, and improving navigation so users could quickly access dining, shuttle, and event information.",
-    image: "/branda.jpeg",
+    image: "/branda.jpg",
     links: [
       { name: "Branda App", url: "#" },
     ],
@@ -65,7 +65,7 @@ export const projectsData = [
     date: "Feb 2025",
     description:
       "Gompeidoro is a gamified Pomodoro timer inspired by WPI’s mascot, designed to help students stay focused through a reward-based system. Built with HTML, CSS, and JavaScript, the app lets users grow a virtual garden as they complete work sessions, blending productivity with playful motivation.",
-    image: "/gompeidoro.jpeg",
+    image: "/gompei.jpeg",
     links: [
       { name: "Devpost", url: "https://devpost.com" },
     ],
@@ -76,9 +76,9 @@ export const projectsData = [
     date: "Mar 2025",
     description:
       "CashCourse is a Streamlit-based financial literacy platform that provides free, customizable learning modules for students. I integrated generative AI to power an interactive assistant that answers questions and guides users through budgeting, credit, and financial planning concepts.",
-    image: "/cashcourse.jpeg",
+    image: "/cc.jpeg",
     links: [
-      { name: "GitHub", url: "#" },
+      { name: "GitHub", url: "youtube.com/watch?v=GxyUzggBtgs&embeds_referring_euri=https%3A%2F%2Fdevpost.com%2F&source_ve_path=MjM4NTE" },
     ],
   },
 ];
