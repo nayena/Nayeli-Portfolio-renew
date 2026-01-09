@@ -5,7 +5,7 @@ export const experiencesData = [
     date: "Sep 2024 – Present",
     description:
       "As a software developer in TAMID, I worked on building technical solutions to support consulting engagements for real clients. I collaborated with cross-functional teams to translate ambiguous business problems into working software, contributing frontend components and data-driven features that improved analysis and client deliverables.",
-    image: "/tamid.jpeg",
+    image: "/TAMID.jpg",
     links: [{ name: "Learn about TAMID", url: "https://tamidgroup.org" }],
   },
   {
@@ -14,7 +14,7 @@ export const experiencesData = [
     date: "May 2025 – Present",
     description:
       "In my global leadership role, I help design educational frameworks, templates, and training resources used across multiple TAMID chapters. I work closely with consulting leaders and alumni to improve project scoping, analytical rigor, and student engagement, ensuring consistent, high-quality consulting experiences.",
-    image: "/tamid_global.jpeg",
+    image: "/TAMID.jpg",
     links: [{ name: "TAMID Global", url: "https://tamidgroup.org" }],
   },
   {
@@ -43,7 +43,7 @@ export const projectsData = [
     date: "Nov 2024",
     description:
       "At JPMorgan Chase Code for Good, my team partnered with Modern States Education Alliance to build Open Path, a full-stack platform that centralizes CLEP credit policies across thousands of institutions. I contributed to frontend architecture, the AI-powered chatbot, and database design, enabling students to easily understand how exam scores translate into college credit.",
-    image: "/openpath.jpeg",
+    image: "/cfg.jpeg",
     links: [
       { name: "Devpost", url: "https://devpost.com" },
     ],
