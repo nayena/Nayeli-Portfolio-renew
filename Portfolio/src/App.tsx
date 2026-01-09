@@ -1971,7 +1971,7 @@ const App = () => {
                   {leetCode && leetCode.totalSolved ? (
                     <div className="flex items-center gap-4">
                       <a
-                        href="https://leetcode.com/deeedaniel/"
+                        href="https://leetcode.com/u/nayena05/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`w-16 h-16 rounded-xl p-1 flex items-center justify-center cursor-pointer ${
@@ -2278,18 +2278,18 @@ const App = () => {
               <button className="rounded-full p-1 bg-green-500 absolute right-2 top-1/2 -translate-y-1/2" />
             </div>
             <a
-              href="/daniel_nguyen_resume.pdf"
+              href="/heidynaranjo_resume.pdf"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer" 
               className="text-sm text-gray-400 mx-4 mt-4 underline"
             >
               click to view in new tab
             </a>
             <div className="flex-1 p-4 overflow-hidden">
               <iframe
-                src="/daniel_nguyen_resume.pdf#view=FitH&zoom=page-fit"
+                src="/heidynaranjo_resume.pdf#view=FitH&zoom=page-fit"
                 className="w-full h-full rounded-lg border border-gray-600"
-                title="Daniel Nguyen Resume"
+                title="Heidy (Nayeli) Naranjo Resume"
               />
             </div>
           </div>
